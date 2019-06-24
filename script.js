@@ -1,6 +1,7 @@
-var WIDTH = 50;
+var WIDTH = 30;
 var HEIGHT = 30;
 var ANTS = 10;
+var GAME_ANIMATION_FRAME = 32;
 var ants = [];
 function Container(width, height) {
   this.width = width;
@@ -108,7 +109,7 @@ function Animator(parentElem) {
       ants[i].setPosition();
       ants[i].detectCollision(i);
     }
-  }, 48);
+  }, GAME_ANIMATION_FRAME);
 }
 
 var container = new Container(800, 500);
